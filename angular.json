@@ -31,6 +31,9 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/primeicons/primeicons.css",
+              "node_modules/primeng/resources/themes/saga-blue/theme.css",
+              "node_modules/primeng/resources/primeng.min.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -127,5 +130,8 @@
       }
     }
   },
-  "defaultProject": "mediapark-demo"
+  "defaultProject": "mediapark-demo",
+  "cli": {
+    "analytics": "3d1a1c6b-6652-43eb-93e3-b4392b71284a"
+  }
 }
