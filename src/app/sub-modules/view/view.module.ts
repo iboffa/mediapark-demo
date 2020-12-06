@@ -5,7 +5,7 @@ import {PanelModule} from 'primeng/panel'
 import { CommonModule } from '@angular/common';
 import { ToolbarModule } from 'primeng/toolbar';
 import { ButtonModule } from 'primeng/button';
-
+import { ScrollPanelModule } from 'primeng/scrollpanel'
 
 
 @NgModule({
@@ -15,7 +15,8 @@ import { ButtonModule } from 'primeng/button';
     ViewRoutingModule,
     PanelModule,
     ToolbarModule,
-    ButtonModule
+    ButtonModule,
+    ScrollPanelModule
   ]
 })
 export class ViewModule { }

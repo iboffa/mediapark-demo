@@ -1,5 +1,5 @@
 <p-panel header="Posts">
-  <p-scrollPanel [style]="{height:'calc(100vh - 258px)'}">
+  <p-scrollPanel [style]="{'height': 'calc(100vh - 258px)'}">
     <p-tree data-test="tree" [value]="postTree" *ngIf="postTree.length>0" styleClass="post-tree">
       <ng-template let-node pTemplate="post">
         <div class="p-grid">

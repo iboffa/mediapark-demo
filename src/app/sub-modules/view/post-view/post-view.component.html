@@ -1,7 +1,9 @@
 <p-panel [header]="post.title" *ngIf="post">
-  <div class="post-content">
-    {{post.content}}
-  </div>
+  <p-scrollPanel [style]="{'height': 'calc(100vh - 258px)'}">
+    <div>
+      {{post.content}}
+    </div>
+  </p-scrollPanel>
 </p-panel>
 <p-panel header="Oops" *ngIf="!post">
   <div class="post-content">
