@@ -2,3 +2,14 @@
   font-weight: bold;
   cursor: pointer;
 }
+
+.no-posts{
+  height: 100%;
+  width:100%;
+  display: grid;
+  place-items: center;
+}
+
+.no-posts span{
+  color: rgba(255, 255, 255, 0.6);
+}
