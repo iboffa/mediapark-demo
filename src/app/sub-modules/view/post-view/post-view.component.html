@@ -1,0 +1,18 @@
+<p-panel [header]="post.title" *ngIf="post">
+  <div class="post-content">
+    {{post.content}}
+  </div>
+</p-panel>
+<p-panel header="Oops" *ngIf="!post">
+  <div class="post-content">
+    This post does not exist.
+  </div>
+</p-panel>
+<p-toolbar>
+  <div class="p-toolbar-group-left">
+    <p-button label="Back" (click)="back()"></p-button>
+  </div>
+  <div class="p-toolbar-group-right">
+    <p-button label="Edit" (click)="edit()" *ngIf="post"></p-button>
+  </div>
+</p-toolbar>

@@ -1,0 +1,33 @@
+<p-panel header="Posts">
+  <p-scrollPanel [style]="{height:'calc(100vh - 258px)'}">
+    <p-tree data-test="tree" [value]="postTree" *ngIf="postTree.length>0" styleClass="post-tree">
+      <ng-template let-node pTemplate="post">
+        <div class="p-grid">
+          <div class="p-col">
+            <div (click)="viewPost(node.data.id)" class="leaf">{{node.data.title}}</div>
+          </div>
+          <div class="p-col-fixed" style="width:100px;">
+            <button pButton pRipple type="button" icon="pi pi-pencil" class="p-button-rounded p-button-text"
+              (click)="editPost(node.data.id)"></button>
+            <button pButton pRipple type="button" icon="pi pi-times"
+              class="p-button-rounded p-button-danger p-button-text" (click)="deletePost(node.data.id)"></button>
+          </div>
+        </div>
+      </ng-template>
+      <ng-template let-node pTemplate="month">
+        {{getMonthName(node.label)}}
+      </ng-template>
+      <ng-template let-node pTemplate="default">
+        {{node.label}}
+      </ng-template>
+    </p-tree>
+    <div *ngIf="postTree.length===0">No posts to show</div>
+  </p-scrollPanel>
+</p-panel>
+<p-toolbar>
+  <div class="p-toolbar-group-left">
+  </div>
+  <div class="p-toolbar-group-right">
+    <button pButton id="new_post" label="Create new Post" (click)="createNewPost()"></button>
+  </div>
+</p-toolbar>

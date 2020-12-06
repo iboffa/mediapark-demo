@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { PostsListComponent } from '../posts-list/posts-list.component';
 
+
 const routes: Routes =[{
   path:'', component: PostsListComponent
 }]
@@ -9,7 +10,7 @@ const routes: Routes =[{
 @NgModule({
   declarations: [],
   imports: [
-    RouterModule.forChild(routes)
+    RouterModule.forChild(routes),
   ],
   exports: [RouterModule]
 })

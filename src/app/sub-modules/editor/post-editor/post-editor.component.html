@@ -1,0 +1,23 @@
+<p-panel header="Create Post">
+  <div class="p-fluid" [formGroup]="form">
+    <div class="p-field p-mt-2">
+      <span class="p-float-label">
+        <input id="title" type="text" pInputText formControlName="title">
+        <label for="title">Title</label>
+      </span>
+    </div>
+    <div class="p-field p-mt-2">
+      <textarea pInputTextarea formControlName="content"></textarea>
+    </div>
+  </div>
+</p-panel>
+<p-toolbar>
+  <div class="p-toolbar-group-left">
+    <p-button label="Back to list" (click)="back()"></p-button>
+    <p-button label="Back to view" (click)="backView()" *ngIf="id" class="p-ml-1"></p-button>
+  </div>
+  <div class="p-toolbar-group-right">
+    <p-button id="submit" label="Submit" [disabled]="!this.form.valid" (click)="save()"
+      pTooltip="Please insert both title and content" [tooltipDisabled]="this.form.valid" tooltipPosition="top"></p-button>
+  </div>
+</p-toolbar>

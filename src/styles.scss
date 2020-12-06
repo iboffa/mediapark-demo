@@ -1,1 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
+html,body{
+    min-height: 100vh;
+    height: auto;
+    margin: 0;
+    background-color: #1f2d40;
+}
+
+.post-tree .p-treenode-label {
+    width: 100%;
+}
+
+.no-radius {
+    border-radius: 0;
+}
